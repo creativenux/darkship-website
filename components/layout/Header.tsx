@@ -3,6 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Mic, Menu, X } from "lucide-react"
+import Image from "next/image"
 
 export default function Header() {
 
@@ -12,24 +13,23 @@ export default function Header() {
         <header className="sticky top-0 z-50 backdrop-blur-lg bg-gray-900/50 border-b border-gray-800">
             <div className="container mx-auto px-4 lg:px-6 h-20 flex items-center justify-between">
                 <Link className="flex items-center justify-center" href="/">
-                    <Mic className="h-6 w-6 text-purple-500" />
-                    <span className="ml-2 text-2xl font-bold text-white">PodCraft Studio</span>
+                    <Image src='/logo-white.png' alt="logo" width={220} height={60} />
                 </Link>
-                <nav className="hidden text-white md:flex gap-4 sm:gap-6">
+                <nav className="hidden text-white md:flex gap-4 sm:gap-6 items-center">
                     <Link className="text-sm font-medium hover:text-purple-400 transition-colors" href="/about">
                         About
                     </Link>
                     <Link className="text-sm font-medium hover:text-purple-400 transition-colors" href="/pricing">
                         Pricing
                     </Link>
-                    <Link className="text-sm font-medium hover:text-purple-400 transition-colors" href="/#features">
-                        Features
-                    </Link>
                     <Link className="text-sm font-medium hover:text-purple-400 transition-colors" href="/#services">
                         Services
                     </Link>
                     <Link className="text-sm font-medium hover:text-purple-400 transition-colors" href="/#gallery">
                         Gallery
+                    </Link>
+                    <Link href="/book">
+                        <button className="text-[#16px] outline outline-1 bg-white text-black hover:bg-black hover:text-white py-3 px-5">Book Now</button>
                     </Link>
                 </nav>
                 <button
