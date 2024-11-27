@@ -40,16 +40,13 @@ export default function Header() {
                 </button>
             </div>
             {mobileMenuOpen && (
-                <div className="absolute top-0 bottom-0 h-screen flex items-center inset-0 bg-gray-900 z-40">
+                <div className="absolute top-0 bottom-0 h-screen flex items-center inset-0 bg-gray-900 z-40 text-white">
                     <nav className="w-full flex flex-col items-center justify-center">
                     <Link className="w-full text-center py-4 text-xl font-medium hover:bg-gray-800 transition-colors" href="/about" onClick={() => setMobileMenuOpen(false)}>
                         About
                     </Link>
                     <Link className="w-full text-center py-4 text-xl font-medium hover:bg-gray-800 transition-colors" href="/pricing" onClick={() => setMobileMenuOpen(false)}>
                         Pricing
-                    </Link>
-                    <Link className="w-full text-center py-4 text-xl font-medium hover:bg-gray-800 transition-colors" href="/#features" onClick={() => setMobileMenuOpen(false)}>
-                        Features
                     </Link>
                     <Link className="w-full text-center py-4 text-xl font-medium hover:bg-gray-800 transition-colors" href="/#services" onClick={() => setMobileMenuOpen(false)}>
                         Services

@@ -46,7 +46,14 @@ export default function Home() {
   // const images = [...Array(9)].map((_, i) => `/placeholder.png?height=${300 + i * 50}&width=${400 + i * 50}`); // Image sources
   const images = [...Array(7)].map((_, index: number) => `/gallery${index+1}.jpg`); 
 
-  const featuredWorks = [...Array(6)].map(_ => 'https://www.youtube.com/embed/dQw4w9WgXcQ' );
+  const featuredWorks = [
+    'https://www.youtube.com/embed/4IenX7OHumk?si=JNcASZZZvk0ZfJIU', 
+    'https://www.youtube.com/embed/3i5_v_sUZ04?si=4Rb3-FXVb-dXOwrf',
+    'https://www.youtube.com/embed/E9CkoQUjiFc?si=1KvfQHfzU8EKPT8G',
+    'https://www.youtube.com/embed/4IenX7OHumk?si=JNcASZZZvk0ZfJIU', 
+    'https://www.youtube.com/embed/3i5_v_sUZ04?si=4Rb3-FXVb-dXOwrf',
+    'https://www.youtube.com/embed/E9CkoQUjiFc?si=1KvfQHfzU8EKPT8G',
+  ];
 
   const openModal = (index: number) => {
     setCurrentImageIndex(index);
