@@ -1,16 +1,8 @@
 import Link from 'next/link'
-import { Mic, PhoneCall, Mail, MapPin, Headphones, Radio, Rss, Facebook, Twitter, Instagram, Youtube, ChevronUp } from 'lucide-react'
+import { PhoneCall, Mail, MapPin, Facebook, Twitter, Instagram, Youtube } from 'lucide-react'
 import Image from 'next/image'
 
 export default function Footer() {
-
-  const footerSections = [
-    {
-      title: 'Studio Services',
-      links: ['Podcast Recording', 'Audio Editing', 'Voice-over Production', 'Live Streaming'],
-      icon: Mic,
-    },
-  ]
 
   const socialLinks = [
     { icon: Facebook, href: 'https://facebook.com' },
@@ -26,7 +18,7 @@ export default function Footer() {
         <div className="py-12 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
             <div>
                 <Image src='/logo-white.png' alt="logo" width={220} height={60} />
-                <p>Hello...</p>
+                <p>Elevate your podcast and video production</p>
                 <div className="flex space-x-4 mt-3">
                     {socialLinks.map((social) => (
                         <a
@@ -78,7 +70,7 @@ export default function Footer() {
               <ul className="space-y-3 text-white">
                 <li>
                     <a
-                        href="https://maps.app.goo.gl/jpm4ckvjju6FPNFm7"
+                        href="https://maps.app.goo.gl/R8kRcAr8NwAtLzKM9"
                         className="hover:text-purple-400 transition-colors duration-200 flex flex-row"
                     >
                         <MapPin className="w-6 h-6 mr-2" />

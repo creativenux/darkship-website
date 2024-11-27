@@ -6,11 +6,11 @@ import { Star, XCircle, ArrowLeftCircle, ArrowRightCircle } from "lucide-react"
 import Header from "@/components/layout/Header"
 import { useState } from "react"; // Import useState for managing state
 import Faq from "@/components/layout/Faq";
-import Why from "@/components/layout/Why";
 import ServicesSection from "@/components/layout/Services";
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+
 
 function FadeInWhenVisible({ children }: { children: React.ReactNode }) {
   const ref = useRef(null);
