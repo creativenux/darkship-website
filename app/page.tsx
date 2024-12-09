@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link";
-import { Star, XCircle, ArrowLeftCircle, ArrowRightCircle } from "lucide-react"
+import { XCircle, ArrowLeftCircle, ArrowRightCircle } from "lucide-react"
 import Header from "@/components/layout/Header"
 import { useState } from "react"; // Import useState for managing state
 import Faq from "@/components/layout/Faq";
@@ -76,7 +76,7 @@ export default function Home() {
         <Header />
         <section className="relative w-full h-screen flex flex-col justify-between overflow-hidden">
             <Image
-                src="/placeholder.png?height=1080&width=1920"
+                src="/gallery6.jpg?height=1080&width=1920"
                 alt="Studio background"
                 layout="fill"
                 objectFit="cover"
@@ -184,8 +184,8 @@ export default function Home() {
               Featured Work
             </h2>
             <div className="column-1 md:columns-2 gap-4">
-              {featuredWorks.map((link: string) => (
-                <div className="w-full h-[300px] mb-5">
+              {featuredWorks.map((link: string, index: number) => (
+                <div className="w-full h-[300px] mb-5" key={index}>
                   <iframe
                     src={link}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
