@@ -1,7 +1,10 @@
+"use client"
+
 import Link from 'next/link'
 import { PhoneCall, Mail, MapPin } from 'lucide-react'
 import Image from 'next/image'
 import { InstagramLogoIcon } from '@radix-ui/react-icons'
+import CalendlyModal from "@/components/layout/CalendlyModal"
 
 export default function Footer() {
 
@@ -36,9 +39,11 @@ export default function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/book" className="hover:text-purple-400 transition-colors duration-200">
+                    <CalendlyModal>
+                      <button className="hover:text-purple-400 transition-colors duration-200 w-full text-left bg-transparent border-0 p-0 m-0 cursor-pointer">
                         Book
-                    </Link>
+                      </button>
+                    </CalendlyModal>
                   </li>
               </ul>
             </div>

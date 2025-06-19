@@ -10,6 +10,7 @@ import ServicesSection from "@/components/layout/Services";
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import CalendlyModal from "@/components/layout/CalendlyModal";
 
 
 function FadeInWhenVisible({ children }: { children: React.ReactNode }) {
@@ -94,9 +95,14 @@ export default function Home() {
                           support to bring your podcast vision to life.
                       </p>
                       <div className="space-x-4">
-                        <Link href="/book">
-                          <button className="text-[#16px] outline outline-1 bg-white text-black hover:bg-black hover:text-white py-3 px-5">Book Now</button>
-                        </Link>
+                        <CalendlyModal>
+                          <button
+                            className="text-[#16px] outline outline-1 bg-white text-black hover:bg-black hover:text-white py-3 px-5"
+                            type="button"
+                          >
+                            Book Now
+                          </button>
+                        </CalendlyModal>
                       </div>
                     </div>
                 </div>
