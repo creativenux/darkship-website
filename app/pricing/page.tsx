@@ -1,10 +1,13 @@
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+"use client"
+
+// import { Button } from "@/components/ui/button"
+// import Link from "next/link"
+import { Card, CardContent, CardDescription, CardHeader } from "@/components/ui/card"
 import { Check, Mic, Headphones, Video } from "lucide-react"
 import Header from "@/components/layout/Header"
 import Faq from "@/components/layout/Faq"
 import Why from "@/components/layout/Why"
+import CalendlyModal from "@/components/layout/CalendlyModal"
 
 export default function PricingPage() {
   const plans = [
@@ -98,9 +101,9 @@ export default function PricingPage() {
                     </ul>
                   </CardContent>
                   <div className="p-6">
-                    <Link href="/book">
+                    <CalendlyModal>
                       <button className="w-full text-[#16px] outline outline-1 bg-white text-black hover:bg-black hover:text-white py-3 px-5">Book Now</button>
-                    </Link>
+                    </CalendlyModal>
                   </div>
                 </Card>
               ))}
