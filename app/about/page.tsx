@@ -1,9 +1,11 @@
+"use client"
+
 import Image from "next/image"
-import { Card, CardContent } from "@/components/ui/card"
 import Header from "@/components/layout/Header"
 import Faq from "@/components/layout/Faq"
 import Why from "@/components/layout/Why"
 import { InstagramLogoIcon } from "@radix-ui/react-icons"
+import CalendlyModal from "@/components/layout/CalendlyModal"
 
 export default function AboutUsPage() {
   const teamMembers = [
@@ -41,6 +43,16 @@ export default function AboutUsPage() {
                 seasoned pro, DarkShip Studios is your partner in bringing your audio vision to life.
               </p>
             </div>
+          <div className="space-x-4 mt-10 text-center">
+            <CalendlyModal>
+              <button
+                className="text-[#16px] outline outline-1 bg-white text-black hover:bg-black hover:text-white py-3 px-5"
+                type="button"
+              >
+                Book A Session Today
+              </button>
+            </CalendlyModal>
+          </div>
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32 bg-black">

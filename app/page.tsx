@@ -1,10 +1,9 @@
 "use client";
 
 import Image from "next/image"
-import Link from "next/link";
 import { XCircle, ArrowLeftCircle, ArrowRightCircle } from "lucide-react"
 import Header from "@/components/layout/Header"
-import { useState } from "react"; // Import useState for managing state
+import { useState } from "react";
 import Faq from "@/components/layout/Faq";
 import ServicesSection from "@/components/layout/Services";
 import { motion } from 'framer-motion'
@@ -44,16 +43,10 @@ function FadeInWhenVisible({ children }: { children: React.ReactNode }) {
 export default function Home() {
   const [isOpen, setIsOpen] = useState<boolean>(false); // State for modal visibility
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0); // State for current image index
-  // const images = [...Array(9)].map((_, i) => `/placeholder.png?height=${300 + i * 50}&width=${400 + i * 50}`); // Image sources
-  const images = [...Array(7)].map((_, index: number) => `/gallery${index+1}.jpg`); 
+  const images = [...Array(10)].map((_, index: number) => `/gallery${index+1}.jpeg`); 
 
   const featuredWorks = [
-    'https://www.youtube.com/embed/4IenX7OHumk?si=JNcASZZZvk0ZfJIU', 
-    'https://www.youtube.com/embed/3i5_v_sUZ04?si=4Rb3-FXVb-dXOwrf',
-    'https://www.youtube.com/embed/E9CkoQUjiFc?si=1KvfQHfzU8EKPT8G',
-    'https://www.youtube.com/embed/4IenX7OHumk?si=JNcASZZZvk0ZfJIU', 
-    'https://www.youtube.com/embed/3i5_v_sUZ04?si=4Rb3-FXVb-dXOwrf',
-    'https://www.youtube.com/embed/E9CkoQUjiFc?si=1KvfQHfzU8EKPT8G',
+    'https://www.youtube.com/embed/JDTImaBt8EI?si=UDxfQ_0JiybU8c7S', 
   ];
 
   const openModal = (index: number) => {
@@ -77,13 +70,13 @@ export default function Home() {
         <Header />
         <section className="relative w-full h-screen flex flex-col justify-between overflow-hidden">
             <Image
-                src="/gallery6.jpg?height=1080&width=1920"
+                src="/gallery2.jpeg?height=1080&width=1920"
                 alt="Studio background"
                 layout="fill"
                 objectFit="cover"
                 className="absolute inset-0 z-0"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-900/90 via-pink-900/90 to-red-900/90 z-10"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-900/80 via-pink-900/80 to-red-900/90 z-10"></div>
             <div className="relative z-20 px-4 md:px-6 max-w-4xl mx-auto flex-grow flex items-center">
                 <div className="flex flex-col items-center space-y-4 text-center">
                     <div className="space-y-8">
@@ -191,7 +184,7 @@ export default function Home() {
             </h2>
             <div className="column-1 md:columns-2 gap-4">
               {featuredWorks.map((link: string, index: number) => (
-                <div className="w-full h-[300px] mb-5" key={index}>
+                <div className="w-full h-[400px] mb-5" key={index}>
                   <iframe
                     src={link}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

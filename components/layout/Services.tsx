@@ -1,4 +1,5 @@
 import { Film, Mic, Newspaper, VideoIcon, Video, Headphones } from 'lucide-react'
+import CalendlyModal from './CalendlyModal'
 
 export default function ServicesSection() {
   const services = [
@@ -66,6 +67,16 @@ export default function ServicesSection() {
             </div>
           ))}
         </div>
+          <div className="space-x-4 mt-10 text-center">
+            <CalendlyModal>
+              <button
+                className="text-[#16px] outline outline-1 bg-white text-black hover:bg-black hover:text-white py-3 px-5"
+                type="button"
+              >
+                Book A Session Today
+              </button>
+            </CalendlyModal>
+          </div>
       </div>
     </section>
   )

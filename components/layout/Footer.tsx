@@ -41,7 +41,7 @@ export default function Footer() {
                   <li>
                     <CalendlyModal>
                       <button className="hover:text-purple-400 transition-colors duration-200 w-full text-left bg-transparent border-0 p-0 m-0 cursor-pointer">
-                        Book
+                        Book A Session
                       </button>
                     </CalendlyModal>
                   </li>
