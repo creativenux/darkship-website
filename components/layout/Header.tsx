@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
+import CalendlyModal from "./CalendlyModal"
 
 export default function Header() {
 
@@ -28,6 +29,9 @@ export default function Header() {
                     <Link className="text-sm font-medium hover:text-purple-400 transition-colors" href="/#gallery">
                         Gallery
                     </Link>
+                    <CalendlyModal>
+                        <button className="text-[#16px] outline outline-1 bg-white text-black hover:bg-black hover:text-white py-3 px-5">Book Now</button>
+                    </CalendlyModal>
                 </nav>
                 <button
                     className="md:hidden text-white z-50"

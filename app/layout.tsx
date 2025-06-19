@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "@/components/layout/Footer";
+import CalendlyModalGlobal from "@/components/layout/CalendlyGlobalModal";
 
 export const metadata: Metadata = {
   title: "DarkShip Studio",
@@ -14,9 +15,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <link rel="icon" href="/icon-red.png"  sizes="any" type="image/png" />
+      <link rel="icon" href="https://darkship.studio/icon-red.png"  sizes="any" type="image/png" />
       <meta name="keywords" content="podcast, podcast recording, podcast production, video production, content, Jos, plateau, audio, voice over, video conferences, video meeting, Nigeria, visual effects" />
-      <meta name="robots" content="index, follow" />
 
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://darkship.studio/" />
@@ -32,11 +32,11 @@ export default function RootLayout({
 
       <body
         className='antialiased'
+        id="body"
       >
         {children}
-
-      <Footer />
-    
+        <CalendlyModalGlobal />
+        <Footer />
       </body>
     </html>
   );
